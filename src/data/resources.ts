@@ -1,0 +1,48 @@
+import { ResourceItem } from '../types';
+
+export const INITIAL_RESOURCES: ResourceItem[] = [
+  {
+    id: 'res-sepsis',
+    category: 'National HSE Algorithm',
+    categoryAr: 'خوارزمية وطنية معتمدة من HSE',
+    title: 'National Sepsis 3.0 Clinical Management Protocol',
+    titleAr: 'بروتوكول الإنتان السريري الوطني 3.0 وإجراءات التدخل السريع',
+    description: 'Standardized screening criteria, lactate clearance thresholds, and early antibiotic escalation pathway.',
+    descriptionAr: 'معايير الفرز الموحدة، قياسات اللاكتات، ومسار التصعيد العلاجي للمضادات الحيوية العاجلة.',
+    code: 'HSE-CLIN-SEP-2026',
+    fileUrl: '/docs/HSE-CLIN-SEP-2026.pdf',
+  },
+  {
+    id: 'res-antimicrobial',
+    category: 'Pharmacology Directive',
+    categoryAr: 'لوائح الصيدلة الإكلينيكية',
+    title: 'Irish National Antimicrobial Stewardship Guidelines',
+    titleAr: 'الدليل الإرشادي الوطني لترشيد استخدام المضادات الحيوية',
+    description: 'Empiric hospital antimicrobial guidelines, restricted agent approvals, and microbiological cultures.',
+    descriptionAr: 'إرشادات المضادات الحيوية التجريبية في المستشفيات، الأدوية المقيدة، وتفسير المزارع البكتيرية.',
+    code: 'HSE-PHARM-STW-04',
+    fileUrl: '/docs/HSE-PHARM-STW-04.pdf',
+  },
+  {
+    id: 'res-imc-audit',
+    category: 'Regulatory Compliance',
+    categoryAr: 'التدقيق المهني والقانوني',
+    title: 'IMC Professional Competence Scheme (PCS) Audit Toolkit',
+    titleAr: 'حقيبة أدوات تدقيق الكفاءة المهنية للمجلس الطبي الإيرلندي',
+    description: 'Step-by-step checklist for annual audit submissions, clinical governance reviews, and signed peer verifications.',
+    descriptionAr: 'قائمة التحقق السنوية لاعتماد الكفاءة المهنية، مراجعات الحوكمة السريرية، واعتمادات الزملاء.',
+    code: 'IMC-AUDIT-2026',
+    fileUrl: '/docs/IMC-AUDIT-2026.pdf',
+  },
+  {
+    id: 'res-nchd-bleep',
+    category: 'Hospital Etiquette',
+    categoryAr: 'بروتوكولات العمل الإكلينيكي',
+    title: 'SBAR Handover & Emergency Escalation Matrix',
+    titleAr: 'مصفوفة تسليم الحالات الحرجة ببروتوكول SBAR والتصعيد السريري',
+    description: 'Standardized handover protocols across shifts, telemetry notifications, and consultant on-call contact.',
+    descriptionAr: 'بروتوكول التسليم السريري الموحد بين الورديات، إشعارات التخطيط القلبي، واستدعاء الاستشاري المناوب.',
+    code: 'SDI-CLIN-SBAR-01',
+    fileUrl: '/docs/SDI-CLIN-SBAR-01.pdf',
+  },
+];

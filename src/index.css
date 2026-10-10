@@ -1,0 +1,762 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafaf9;
+    color: #1e293b;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Universal Media Auto-Fit Math */
+  img, video, iframe, canvas, svg {
+    max-width: 100%;
+  }
+
+  /* Universal Auto-Fit Text Wrapping */
+  h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
+
+  p, span, a, label, button, input, textarea, select {
+    overflow-wrap: break-word;
+  }
+
+  /* Prevents horizontal blowout on small screens from flex items */
+  .flex > * {
+    min-width: 0;
+  }
+  
+  table {
+    max-width: 100%;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+/* =========================================================================
+   FORMAL EXECUTIVE MEDICAL UNION AESTHETICS (Ultra-Lightweight & Smooth)
+   ========================================================================= */
+
+/* Executive Card - Clean, Translucent, Extremely Light on CPU/GPU */
+.bubble-glass {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 1.75rem;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
+  position: relative;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.bubble-glass:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(203, 213, 225, 1);
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.07);
+  transform: translateY(-1.5px);
+}
+
+/* Deep Emerald Executive Water Glass Surface */
+.bubble-glass-emerald {
+  background: rgba(240, 253, 244, 0.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(187, 247, 208, 0.85);
+  border-radius: 1.75rem;
+  box-shadow: 0 4px 16px -2px rgba(22, 101, 52, 0.04);
+  position: relative;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bubble-glass-emerald:hover {
+  background: rgba(240, 253, 244, 0.98);
+  border-color: rgba(134, 239, 172, 0.95);
+  box-shadow: 0 8px 24px -4px rgba(22, 101, 52, 0.08);
+}
+
+/* Dark Slate Executive Water Glass */
+.bubble-glass-dark {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(51, 65, 85, 0.85);
+  border-radius: 1.75rem;
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  position: relative;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bubble-glass-dark:hover {
+  background: #0f172a;
+  border-color: rgba(52, 211, 153, 0.45);
+}
+
+/* Restrained Functional Tag / Chip - Pill Shape */
+.bubble-glass-pill {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.bubble-glass-pill:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* High-Performance Lightweight Water Ambient Background (0 CPU cost) */
+.water-ambient-canvas {
+  background-image: 
+    radial-gradient(circle at 10% 12%, rgba(16, 185, 129, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 90% 25%, rgba(13, 148, 136, 0.03) 0%, transparent 45%),
+    radial-gradient(circle at 35% 85%, rgba(14, 165, 233, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Static Lightweight Glass Water Bubble Graphic */
+.water-bubble-sphere {
+  background: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(16, 185, 129, 0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+/* Form Inputs */
+.bubble-glass-input {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.625rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  color: #0f172a;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bubble-glass-input:focus {
+  outline: none;
+  border-color: #15803d;
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.12);
+}
+
+/* Bubble Glass Selections (Dropdowns, Tab Selectors, Category Pills) */
+.bubble-glass-select {
+  appearance: none;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23334155'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  padding-right: 3rem;
+  color: #0f172a;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bubble-glass-select:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #15803d;
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+}
+
+.bubble-glass-select option {
+  background-color: #ffffff;
+  color: #0f172a;
+  padding: 0.5rem;
+}
+
+/* Bubble Glass Interactive Selection Pill (Pills for categories, tabs, options) */
+.bubble-selection-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  white-space: nowrap;
+  min-height: 2.25rem;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bubble-selection-pill--inactive {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+.bubble-selection-pill--inactive:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.bubble-selection-pill--active {
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+}
+
+.bubble-selection-pill--active-emerald {
+  background: #15803d;
+  color: #ffffff;
+  border: 1px solid #166534;
+  box-shadow: 0 2px 6px rgba(21, 128, 61, 0.2);
+}
+
+/* Specialized Institutional Navigation Link for Header */
+.bubble-nav-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1280px) {
+  .bubble-nav-pill {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.84rem;
+  }
+}
+
+.bubble-nav-pill--inactive {
+  background: transparent;
+  color: #475569;
+  border: 1px solid transparent;
+}
+
+.bubble-nav-pill--inactive:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.bubble-nav-pill--active {
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+}
+
+/* Bubble Glass Inputs (Search boxes, text inputs) */
+.bubble-glass-input {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  color: #0f172a;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bubble-glass-input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #15803d;
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+}
+
+/* Optical Glass - Featherweight high-performance style */
+.optical-glass {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 2rem;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.optical-glass-subtle {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.optical-glass-pill {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+/* =========================================================================
+   SCROLL REVEAL "ONE BY ONE" PRESENTATION CASCADE (Lag-Free & Feather-Light)
+   Zero filter-blur thrashing, 100% hardware-accelerated opacity & position.
+   ========================================================================= */
+
+.scroll-reveal {
+  opacity: 0.92;
+  transform: translateY(6px);
+  transition: opacity 0.22s ease-out, transform 0.22s ease-out;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.scroll-fade-el,
+.scroll-fade-item,
+.scroll-fade-section,
+.scroll-fade-card {
+  opacity: 0.92;
+  transform: translateY(6px);
+  transition: opacity 0.22s ease-out, transform 0.22s ease-out;
+}
+
+.scroll-fade-el.is-revealed,
+.scroll-fade-item.is-revealed,
+.scroll-fade-section.is-revealed,
+.scroll-fade-card.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Stagger sequence container & children - instantaneous and lightweight */
+.reveal-group .reveal-item {
+  opacity: 0.92;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.reveal-group.is-revealed .reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger indices helper classes */
+.stagger-1 { transition-delay: 0.1s !important; }
+.stagger-2 { transition-delay: 0.2s !important; }
+.stagger-3 { transition-delay: 0.3s !important; }
+.stagger-4 { transition-delay: 0.4s !important; }
+.stagger-5 { transition-delay: 0.5s !important; }
+.stagger-6 { transition-delay: 0.6s !important; }
+
+/* =========================================================================
+   BRIGHT AVENUE (https://bright-avenue.jp/) SIGNATURE ANIMATIONS & STYLES
+   ========================================================================= */
+
+/* 1. Preloader Overlay (.p-loading) */
+.p-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d3d44;
+  color: #ffffff;
+  transition: opacity 0.85s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.85s;
+}
+
+.p-loading.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.p-loading__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 1.5rem;
+}
+
+.p-loading__logo-cube {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  perspective: 1000px;
+}
+
+.p-loading__cube-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: baCubeFlip 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes baCubeFlip {
+  0% { transform: rotateY(0deg) rotateX(0deg); }
+  25% { transform: rotateY(90deg) rotateX(15deg); }
+  50% { transform: rotateY(180deg) rotateX(0deg); }
+  75% { transform: rotateY(270deg) rotateX(-15deg); }
+  100% { transform: rotateY(360deg) rotateX(0deg); }
+}
+
+.p-loading__txt-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.p-loading__txt-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: baMarqueeRun 18s linear infinite;
+}
+
+@keyframes baMarqueeRun {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 2. Running Marquee Typographic Ticker (.c-rale) */
+.c-rale {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  user-select: none;
+}
+
+.c-rale__track {
+  display: inline-flex;
+  animation: baTickerScroll 26s linear infinite;
+  white-space: nowrap;
+}
+
+.c-rale__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes baTickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 3. Hover Rotate Text (.c-hover-rotate-text) */
+.c-hover-rotate-text {
+  display: inline-block;
+  overflow: visible;
+  position: relative;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.c-hover-rotate-text-inner {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.c-hover-rotate-text:hover .c-hover-rotate-text-inner {
+  transform: translateY(-100%);
+}
+
+.c-hover-rotate-text-inner span:last-child {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+/* 4. Sliding Arrow Track Buttons (.c-btn) */
+.c-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  line-height: 1.25;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.c-btn--dark {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 1px solid #1e293b;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12), 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.c-btn--dark:hover {
+  background-color: #1e293b;
+  border-color: #334155;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.18);
+}
+
+.c-btn--dark:active {
+  transform: translateY(0);
+}
+
+.c-btn--teal {
+  background-color: #15803d;
+  color: #ffffff;
+  border: 1px solid #166534;
+  box-shadow: 0 1px 3px rgba(21, 128, 61, 0.2);
+}
+
+.c-btn--teal:hover {
+  background-color: #166534;
+  border-color: #14532d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(21, 128, 61, 0.25);
+}
+
+.c-btn--teal:active {
+  transform: translateY(0);
+}
+
+/* Polished Icon Micro-Interactions */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+button:hover .material-symbols-outlined {
+  transform: translateY(-0.5px);
+}
+
+/* Subtle Interactive Border Glow for Specific Cards */
+.card-hover-formal {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.card-hover-formal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.08);
+}
+
+.c-btn__arrow-box {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.c-btn__arrow {
+  position: absolute;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.c-btn__arrow--main {
+  transform: translateX(0);
+}
+
+.c-btn:hover .c-btn__arrow--main {
+  transform: translateX(160%);
+}
+
+.c-btn__arrow--slide {
+  transform: translateX(-160%);
+}
+
+.c-btn:hover .c-btn__arrow--slide {
+  transform: translateX(0);
+}
+
+/* 5. Aperture Frame & 3D Stage Mask */
+.ba-glass-aperture {
+  position: relative;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+/* 6. Line Reveal Mask (.data-line-reveal) */
+.line-reveal-wrapper {
+  overflow: hidden;
+  display: block;
+}
+
+.line-reveal-content {
+  display: block;
+  animation: baLineReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes baLineReveal {
+  0% { transform: translateY(110%); opacity: 0; }
+  100% { transform: translateY(0%); opacity: 1; }
+}
+
+/* 7. Interactive Mouse Pointer Halo */
+.mouse-follower-halo {
+  position: fixed;
+  width: 38px;
+  height: 38px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(62, 173, 135, 0.6);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+  mix-blend-mode: difference;
+}
+
+.mouse-follower-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #3EAD87;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+
+.btn-executive {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 44px;
+}
+.btn-executive:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 10px 25px -8px rgba(15, 23, 42, 0.25);
+}
+
+/* Fluid Auto-Fit Grid Utilities based on container & device width calculations */
+.autofit-grid-xs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+}
+
+.autofit-grid-sm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+
+.autofit-grid-md {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.autofit-grid-lg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+}
+
+/* Device-Adaptive Responsive Sizing (320px phone to 4K ultra-wide) */
+@media (max-width: 640px) {
+  .bubble-glass,
+  .bubble-glass-emerald,
+  .bubble-glass-dark,
+  .optical-glass,
+  .ba-glass-aperture {
+    border-radius: 1.25rem !important;
+  }
+
+  /* Auto-fit modal containers on mobile viewports */
+  .bubble-glass.max-w-md,
+  .bubble-glass.max-w-lg,
+  .bubble-glass.max-w-xl,
+  .bubble-glass.max-w-2xl,
+  .bubble-glass.max-w-3xl {
+    width: calc(100vw - 1rem) !important;
+    max-width: calc(100vw - 1rem) !important;
+    max-height: 92dvh !important;
+    margin: 0.5rem !important;
+    padding: 1.25rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bubble-glass,
+  .bubble-glass-emerald,
+  .bubble-glass-dark,
+  .optical-glass,
+  .ba-glass-aperture {
+    border-radius: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bubble-glass,
+  .optical-glass,
+  .ba-glass-aperture {
+    border-radius: 1.5rem;
+  }
+}
+
+/* Zero CPU/GPU strain for battery saving and reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
